@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: yellowgreen;
+    padding: 20px;
+}
+nav{
+    background-color: lime;
+    display: grid;
+    place-items: center;
+}
+nav ul{
+
+    list-style-type: none;
+}
+nav ul a{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in;
+    font-size: 18px;
+}
+nav ul a:hover{
+    background-color: green;
+    color: #fff;
+}
+.iteams{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+.item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.item img:hover{
+    transform: scale(1.05);
+}
+.item h4{
+    text-align: center;
+    padding: 10px;
+}
+.item button{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: lime;
+    border: none;
+    cursor: pointer;
+    font-size: black;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    transition: 0.2s all;
+}
+.item button:hover{
+    background-color: green;
+    color: #fff;
+    transition: scale(1.05);
+
+}
+@-moz-document and (max-width: 100px){
+    .iteams{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@-moz-document and (max-width: 768px){
+    .iteams{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
